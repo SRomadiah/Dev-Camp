@@ -4,6 +4,11 @@ const ShoeApiController = require("../controllers/shoeApi.controller");
 
 const router = Router();
 
+router.get("/shoe", ShoeController.listPage);
+router.get("/shoe/create", ShoeController.addProduct);
+router.get("/shoe/:id", ShoeController.detailPage);
+router.get("/about", ShoeController.aboutProduct);
+
 router.get("/api/shoe", ShoeApiController.getShoe);
 router.get("/api/shoe/:id", ShoeApiController.getDetailShoe);
 router.post("/api/shoe", ShoeApiController.addShoe);
